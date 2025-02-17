@@ -1,0 +1,22 @@
+package:
+  dependencies:
+  - arrays
+  - assert
+  - console
+  - control
+  - effect
+  - foldable-traversable
+  - gen
+  - integers
+  - maybe
+  - partial
+  - prelude
+  - quickcheck
+  - random
+  - strings
+  - unordered-collections
+  name: uuidv4
+workspace:
+  extra_packages: {}
+  package_set:
+    url: https://raw.githubusercontent.com/purescript/package-sets/psc-0.15.4-20221024/packages.json
