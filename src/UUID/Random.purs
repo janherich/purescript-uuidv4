@@ -10,6 +10,7 @@ import Prelude
 
 import Control.Alternative (guard)
 import Data.Array as Array
+import Data.Hashable (class Hashable, hash)
 import Data.Int as Int
 import Data.Maybe (Maybe, fromJust)
 import Data.String as String
@@ -23,6 +24,9 @@ import Partial.Unsafe (unsafePartial)
 
 -- | A type for version 4 (random) UUIDs.
 data UUIDv4 = UUIDv4 String (Array Int)
+
+instance Hashable UUIDv4 where
+  hash (UUIDv4 s _) = hash s
 
 instance Eq UUIDv4 where
   eq (UUIDv4 a _) (UUIDv4 b _) = a == b
